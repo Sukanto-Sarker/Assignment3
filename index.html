@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Div Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* 3D Hover effect */
+    .card-3d {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform-style: preserve-3d;
+    }
+    .card-3d:hover {
+      transform:  rotateY(360deg);
+      transition: 4s;
+
+    }
+
+    .card-2d:hover{
+       transform:  rotateX(16deg) rotateY(16deg) ;
+      transition: 2s;
+    }
+
+    /* Glass effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    /*
+    for front 
+    */
+
+@font-face {
+            font-family: 'NextGenFont';
+            src: url('fonts/military-star.woff2') format('woff2'),
+                 url('fonts/military-star.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap; 
+        }
+
+        /* STEP 2: Define a CSS rule to apply the font */
+        .perfect-dark-text {
+            font-family: 'NextGenFont', sans-serif; /* Use the custom font first */
+            text-transform: uppercase;
+            font-size: 60px;
+            color: #f1f1f1; /* Light gray to match the look */
+            text-shadow: 0 0 10px rgba(192, 192, 192, 0.5);
+            line-height: 1;
+        }
+
+  </style>
+
+</head>
+<body id="home" class="bg-gradient-to-br from-amber-600 via-black to-gray-900">
+ <!-- my navbar seection start -->
+<header class="text-white w-full">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <div class="text-amber-900 text-4xl md:text-7xl font-bold">SS</div>
+      <h1 class="text-xl md:text-2xl font-bold perfect-dark-text">Sukanto Sarker</h1>
+    </div>
+
+    <!-- Navigation (Desktop Only) -->
+    <nav class="hidden md:flex items-center gap-8 text-lg font-semibold">
+      <a href="#home" class="hover:text-green-400 duration-200"><i class="fa-solid fa-house pr-1"></i>Home</a>
+      <a href="#about" class="hover:text-green-400 duration-200"><i class="fa-solid fa-user pr-1"></i>About</a>
+      <a href="#Contact" class="hover:text-green-400 duration-200"><i class="fa-solid fa-comment-dots pr-1"></i>Contact</a>
+      <a href="#servisess" class="hover:text-green-400 duration-200"><i class="fa-solid fa-cogs pr-1"></i>Services</a>
+      <a href="#servise" class="hover:text-green-400 duration-200"><i class="fa-solid fa-folder-open pr-1"></i>Project</a>
+      <a href="#servise" class="hover:text-green-400 duration-200"><i class="fa-solid fa-blog pr-1"></i>Blog</a>
+    </nav>
+
+    <!-- Social Icons (Desktop Only) -->
+    <div class="hidden md:flex items-center gap-4">
+      <a href="https://x.com/home"target="_blank"><i class="fa-brands fa-twitter bg-[#1DA1F2] p-2 rounded-full hover:bg-green-400 duration-200"></i></a>
+      <a href="https://www.instagram.com/sukanto192/"target="_blank"><i class="fa-brands fa-instagram bg-[#E1306C] p-2 rounded-full hover:bg-green-400 duration-200"></i></a>
+      <a href="https://www.linkedin.com/in/sukanto-sarker/"target="_blank"><i class="fa-brands fa-linkedin bg-[#0A66C2] p-2 rounded-full hover:bg-green-400 duration-200"></i></a>
+      <a href="https://github.com/Sukanto-Sarker"target="_blank"><i class="fa-brands fa-github bg-[#868282] p-2 rounded-full hover:bg-green-400 duration-200"></i></a>
+      <a href="https://www.facebook.com/sukanto.sarker.73/"target="_blank"><i class="fa-brands fa-facebook bg-[#1877F2] p-2 rounded-full hover:bg-green-400 duration-200"></i></a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-button" class="md:hidden w-11 h-11 bg-pink-600 rounded-full flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="white" class="w-7 h-7">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M4.5 6h15M4.5 12h15m-15 6h15" />
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-800 text-white text-center bg-gradient-to-br from-amber-600 via-black to-gray-900">
+    <nav class="flex flex-col px-4 py-4 gap-4">
+      <a href="#home" class="hover:text-green-400 duration-200">Home</a>
+      <a href="#about" class="hover:text-green-400 duration-200">About</a>
+      <a href="#Contact" class="hover:text-green-400 duration-200">Contact</a>
+      <a href="#servisess" class="hover:text-green-400 duration-200">Services</a>
+      <a href="#servise" class="hover:text-green-400 duration-200">Project</a>
+      <a href="#servise" class="hover:text-green-400 duration-200">Blog</a>
+    </nav>
+  </div>
+</header>
+
+
+  <!-- my hero  seection start  here -->
+<section class="relative  text-white py-24 px-6 overflow-hidden">
+
+    <!-- Background pattern -->
+    <div class="absolute inset-0 opacity-70">
+        <img src="hero bgimg.png" class="w-full h-full object-cover" alt="">
+    </div>
+
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 relative z-10">
+
+        <!-- LEFT TEXT -->
+        <div class="flex flex-col justify-center">
+            
+            <p class="text-gray-300 tracking-widest font-semibold mb-4">
+                HELLO
+            </p>
+
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                i’m Sukanto Sarker a
+            </h1>
+
+           <h1 id="hero" class="text-4xl md:text-6xl font-extrabold leading-tight text-[#ff0055] mt-2">
+             <span id="typed-text"></span>
+           </h1>
+
+
+            <p class="text-gray-400 mt-6 max-w-lg leading-relaxed">
+                A personal portfolio is a collection of your work, achievements, and 
+                skills that highlights your abilities and professional growth.
+            </p>
+
+            <!-- Button -->
+            <div class="mt-10">
+                <a href="#"
+                   class="bg-[#ff0055] px-6 py-3 rounded-full text-white font-semibold text-lg 
+                          hover:bg-pink-600 transition duration-200 inline-flex items-center gap-2">
+                    View Portfolio →
+                </a>
+            </div>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="relative flex justify-center md:justify-end">
+            <img src="hero pic.png" 
+                 alt="Web Developer" 
+                 class="w-[420px] md:w-[520px] object-contain relative z-20">
+
+            <!-- Gradient behind the person -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70"></div>
+        </div>
+
+    </div>
+
+</section>
+  <!-- my hero seection end here -->
+
+  <!-- my about me seection start here -->
+<section id="about" class="text-white py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Heading -->
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center perfect-dark-text">
+            About Me
+        </h2>
+        <div class="w-24 h-1 bg-amber-500 mx-auto mt-3 mb-12"></div>
+
+        <!-- Responsive Grid -->
+        <div class="grid md:grid-cols-2 pb-2  gap-10 items-center glass ">
+
+            <!-- Image -->
+            <div class="w-full flex justify-center ">
+                <img src="about me picture.png"
+                     alt="Profile Photo"
+                     class="rounded-lg w-full h-64 object-cover md:h-[400px] lg:h-[750px] lg:w-[700px]">
+            </div>
+
+            <!-- Content -->
+            <div class="ml-4">
+                <h3 class="text-amber-400 text-lg md:text-xl font-semibold mb-2 mt-8">
+                    Who am I?
+                </h3>
+
+                <h1 class="text-3xl md:text-4xl  font-extrabold leading-snug mb-4 perfect-dark-text">
+                    I'm Sukanto Sarker <br>
+                    <span class="text-amber-600" id="typed"></span>
+                </h1>
+
+                <p class="text-gray-300 leading-relaxed">
+                   Hello! I’m Sukanto Sarker, a passionate and dedicated Web Developer from Akandopara, Tangail, Dhaka, Bangladesh. I specialize in building modern, user-friendly web applications and currently focus on mastering the MERN Stack, Next.js, and MongoDB.
+
+                   I enjoy turning ideas into real, functional digital products. Whether it’s an e-commerce website, a portfolio, or a custom                    system, I love solving problems through clean design and efficient development.
+                   
+                   Over time, I’ve been learning and improving my skills in:
+                   
+                   JavaScript & DOM
+                   
+                   MongoDB & Mongoose
+                   
+                   Express.js
+                   
+                   Next.js
+                   
+                   TanStack Query
+                   
+                   GitHub & professional development workflow
+                   
+                   Data Structures & algorithm basics
+                   
+                   Digital Logic Design and core CSE subjects
+                   
+                   I aim to apply my skills in both local jobs and international remote/freelance opportunities. Alongside development, I’m also                    planning to create content for a YouTube channel and a Facebook page that focuses on village engineering and creative rural                    innovations.
+                   
+                   Every day, I’m learning, improving, and working toward becoming a highly skilled full-stack developer.
+                </p>
+
+                <!-- Divider -->
+                <div class="w-full border-b border-gray-700 my-6"></div>
+
+                <!-- Info Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 text-gray-300 text-lg">
+                    <p><span class="font-semibold">Name:</span>Sukanto Sarker</p>
+                    <p><span class="font-semibold">Email:</span>
+                        <span class="text-amber-500">sukanto5098@gmail.com</span>
+                    </p>
+                    <p><span class="font-semibold">Age:</span> 24</p>
+                    <p><span class="font-semibold">From:</span>Tangail,Dhaka,Bangladesh</p>
+                </div>
+
+                <!-- Buttons + Social -->
+                <div class="flex flex-wrap items-center gap-6 mt-5">
+
+                    <!-- Download CV Button -->
+                    <a href="#"
+                       class="bg-amber-500 rounded-full px-6 py-3 text-black font-semibold hover:bg-green-400 duration-200">
+                        Download CV
+                    </a>
+
+                    <!-- Line (hidden on mobile) -->
+                    <div class="hidden md:block w-20 h-[1px] bg-gray-600"></div>
+
+                    <!-- Social Icons -->
+                    <div class="flex gap-4 flex-wrap w-full justify-center md:justify-start mb-2 md:mb-16">
+
+                        <a href="https://x.com/home"target="_blank" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fa-brands fa-twitter bg-[#1DA1F2] hover:bg-green-400 duration-200 p-2 md:p-3 rounded-full"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/sukanto192/"target="_blank" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fa-brands fa-instagram bg-[#E1306C] hover:bg-green-400 duration-200 p-2 md:p-3 rounded-full"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/sukanto-sarker/"target="_blank" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fa-brands fa-linkedin bg-[#0A66C2] p-2 md:p-3 rounded-full hover:bg-green-400 duration-200"></i>
+                        </a>
+
+                        <a href="https://github.com/Sukanto-Sarker"target="_blank" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fa-brands fa-github bg-[#868282] p-2 md:p-3 rounded-full hover:bg-green-400 duration-200"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/sukanto.sarker.73/"target="_blank" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fa-brands fa-facebook bg-[#1877F2] p-2 md:p-3 rounded-full hover:bg-green-400 duration-200"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- my about me seection end here -->
+
+<!-- my skill seection start here  -->
+<section id="servisess" class="text-white mt-16 mb-12 glass border border-amber-400 rounded-2xl 
+            w-full md:w-3/4 lg:w-3/5 xl:w-5/6 mx-auto p-6">
+
+    <h1 class="font-bold text-center text-3xl mb-3 text-amber-200">
+        My Skills
+    </h1>
+
+    <div class="w-full mx-auto text-center">
+
+        <p class="text-base leading-relaxed text-gray-200">
+            I work with a wide range of modern web development tools and technologies 
+            that help me build complete, high-quality, and scalable digital products. 
+            My skill set covers everything from frontend design to backend development, 
+            databases, API testing, and deployment.
+            <br><br>
+
+            On the frontend, I use <span class="text-amber-300">HTML, CSS, JavaScript, Tailwind CSS, React, and Next.js</span> 
+            to create fast, clean, and responsive user interfaces. For backend development, 
+            I work with <span class="text-amber-300">Node.js and Express.js</span> to build secure and efficient applications.
+            <br><br>
+
+            I manage databases using <span class="text-amber-300">MongoDB</span> and <span class="text-amber-300">MySQL</span>, 
+            ensuring data is well-structured and optimized. I also use tools like 
+            <span class="text-amber-300">VS Code, GitHub, and Postman</span> to write, test, and manage projects smoothly.
+            <br><br>
+
+            For deployment, I work with <span class="text-amber-300">Docker</span> to create reliable and reproducible environments.
+            Together, these skills allow me to build professional, full-stack web applications from start to finish.
+        </p>
+
+    </div>
+
+</section>
+<h2 class="text-4xl pt-8 md:text-5xl font-extrabold text-center  perfect-dark-text">Technologies I Work With</h2>
+<div class="w-24 h-1 bg-amber-500 mx-auto mt-3 mb-1"></div>
+
+  <section class="min-h-screen  flex items-center justify-center mt-5 mb-5 ">
+  <!-- Responsive Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<!-- CARD 1: HTML -->
+  <div class="w-60 p-6 rounded-2xl bg-gradient-to-br from-amber-600 via-black to-gray-900 border-2 card-3d text-center">
+    <div class="flex justify-center">
+      <img src="htmllogo.png" class="w-20 h-20" />
+    </div>
+    <h1 class="text-2xl text-white font-bold mt-3">HTML</h1>
+    <div class="w-full bg-white/30 rounded-full h-4 mt-3 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full" style="width: 90%;"></div>
+    </div>
+    <p class="text-white mt-2 text-lg font-semibold">90%</p>
+  </div>
+
+  <!-- CARD 2: CSS -->
+  <div class="w-60 p-6 rounded-2xl glass card-3d border-2 text-center">
+    <div class="flex justify-center">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" class="w-20 h-20" />
+    </div>
+    <h1 class="text-2xl text-white font-bold mt-3">CSS</h1>
+    <div class="w-full bg-white/30 rounded-full h-4 mt-3 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full" style="width: 70%;"></div>
+    </div>
+    <p class="text-white mt-2 text-lg font-semibold">70%</p>
+  </div>
+
+  <!-- CARD 3: JavaScript -->
+  <div class="w-60 p-6 rounded-2xl border-2 bg-gradient-to-br from-amber-600 via-black to-gray-900 border-2 card-3d text-center">
+    <div class="flex justify-center">
+      <img src="javaScript.png" class="w-20 h-20" />
+    </div>
+    <h1 class="text-2xl text-white font-bold mt-3">JavaScript</h1>
+    <div class="w-full bg-white/30 rounded-full h-4 mt-3 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full" style="width: 70%;"></div>
+    </div>
+    <p class="text-white mt-2 text-lg font-semibold">70%</p>
+  </div>
+
+  <!-- CARD 4: Tailwind CSS -->
+  <div class="w-60 p-6 rounded-2xl glass card-3d text-center">
+    <div class="flex justify-center">
+      <img src="tailwind.png" class="w-20 h-20" />
+    </div>
+    <h1 class="text-2xl text-white font-bold mt-3">Tailwind CSS</h1>
+    <div class="w-full bg-white/30 rounded-full h-4 mt-3 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full" style="width: 70%;"></div>
+    </div>
+    <p class="text-white mt-2 text-lg font-semibold">70%</p>
+  </div>
+
+  <!-- CARD 5: Bootstrap -->
+  <div class="w-60 p-6 rounded-2xl bg-gradient-to-br from-amber-600 via-black to-gray-900 border-2 card-3d text-center">
+    <div class="flex justify-center">
+      <img src="bootstrap-logo-rounded-free-png.webp" class="w-20 h-20" />
+    </div>
+    <h1 class="text-2xl text-white font-bold mt-3">Bootstrap</h1>
+    <div class="w-full bg-white/30 rounded-full h-4 mt-3 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full" style="width: 40%;"></div>
+    </div>
+    <p class="text-white mt-2 text-lg font-semibold">40%</p>
+  </div>
+
+  <!-- CARD 6: Next.js -->
+  <div class="w-60 p-6 rounded-2xl glass border-2 card-3d text-center">
+    <div class="flex justify-center">
+      <img src="next-js-logo-png_seeklogo-321806.png" class="w-20 h-20" />
+    </div>
+    <h1 class="text-2xl text-white font-bold mt-3">Next.js</h1>
+    <div class="w-full bg-white/30 rounded-full h-4 mt-3 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full" style="width: 60%;"></div>
+    </div>
+    <p class="text-white mt-2 text-lg font-semibold">60%</p>
+  </div>
+
+  <!-- CARD 7: Node.js -->
+  <div class="w-60 p-6 rounded-2xl bg-gradient-to-br from-amber-600 via-black to-gray-900 border-2 card-3d text-center">
+    <div class="flex justify-center">
+      <img src="node-js.png" class="w-20 h-20" />
+    </div>
+    <h1 class="text-2xl text-white font-bold mt-3">Node.js</h1>
+    <div class="w-full bg-white/30 rounded-full h-4 mt-3 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full" style="width: 70%;"></div>
+    </div>
+    <p class="text-white mt-2 text-lg font-semibold">70%</p>
+  </div>
+
+  <!-- CARD 8: MongoDB -->
+  <div class="w-60 p-6 rounded-2xl border-2 glass card-3d text-center">
+    <div class="flex justify-center">
+      <img src="mongodb.png" class="w-20 h-20" />
+    </div>
+    <h1 class="text-2xl text-white font-bold mt-3">MongoDB</h1>
+    <div class="w-full bg-white/30 rounded-full h-4 mt-3 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full" style="width: 80%;"></div>
+    </div>
+    <p class="text-white mt-2 text-lg font-semibold">80%</p>
+  </div>
+
+  <!-- CARD 9: MySQL -->
+  <div class="w-60 p-6 rounded-2xl bg-gradient-to-br from-amber-600 via-black to-gray-900 border-2 card-3d text-center">
+    <div class="flex justify-center">
+      <img src="mysql.png" class="w-20 h-20" />
+    </div>
+    <h1 class="text-2xl text-white font-bold mt-3">MySQL</h1>
+    <div class="w-full bg-white/30 rounded-full h-4 mt-3 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full" style="width: 75%;"></div>
+    </div>
+    <p class="text-white mt-2 text-lg font-semibold">75%</p>
+  </div>
+
+  <!-- CARD 10: React -->
+  <div class="w-60 p-6 rounded-2xl border-2 glass card-3d text-center">
+    <div class="flex justify-center">
+      <img src="react.png" class="w-20 h-20" />
+    </div>
+    <h1 class="text-2xl text-white font-bold mt-3">React</h1>
+    <div class="w-full bg-white/30 rounded-full h-4 mt-3 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full" style="width: 80%;"></div>
+    </div>
+    <p class="text-white mt-2 text-lg font-semibold">80%</p>
+  </div>
+    
+  </div>
+</section>
+<h2 class="text-4xl md:text-5xl font-extrabold text-center perfect-dark-text">Productivity Tools</h2>
+<div class="w-24 h-1 bg-amber-500 mx-auto mt-2 mb-9"></div>
+
+<section class="flex justify-center px-4 mt-9">
+  <!-- Responsive Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+   <!-- CARD 1: GitHub -->
+  <div class="w-60 p-6 rounded-2xl glass card-3d text-center shadow-2xl transition duration-300 ease-in-out hover:scale-105">
+    <div class="flex justify-center">
+      <img src="github.png" class="w-20 h-20 rounded-full" alt="GitHub Logo" />
+    </div>
+    <h1 class="text-3xl text-white font-extrabold mt-4 tracking-wider">GitHub</h1>
+    <div class="w-24 h-1 bg-white/50 rounded-full mx-auto my-3"></div> 
+    <p class="text-white/80 text-lg mb-2">Skill Progress</p>
+    <div class="w-full bg-white/30 rounded-full h-4 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full shadow-lg" style="width: 80%;"></div>
+    </div>
+    <p class="text-white text-xl font-semibold mt-2">80%</p>
+  </div>
+
+  <!-- CARD 2: Postman -->
+  <div class="w-60 p-6 rounded-2xl bg-gradient-to-br from-amber-600 via-black to-gray-900 border-2 card-3d text-center shadow-2xl transition duration-300 ease-in-out hover:scale-105">
+    <div class="flex justify-center">
+      <img src="postman.png" class="w-20 h-20 rounded-full" alt="Postman Logo" />
+    </div>
+    <h1 class="text-3xl text-white font-extrabold mt-4 tracking-wider">Postman</h1>
+    <div class="w-24 h-1 bg-white/50 rounded-full mx-auto my-3"></div> 
+    <p class="text-white/80 text-lg mb-2">Skill Progress</p>
+    <div class="w-full bg-white/30 rounded-full h-4 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full shadow-lg" style="width: 90%;"></div>
+    </div>
+    <p class="text-white text-xl font-semibold mt-2">90%</p>
+  </div>
+
+  <!-- CARD 3: Docker -->
+  <div class="w-60 p-6 rounded-2xl bg-gradient-to-br from-amber-600 via-black to-gray-900 border-2 card-3d text-center shadow-2xl transition duration-300 ease-in-out hover:scale-105">
+    <div class="flex justify-center">
+      <img src="docker.png" class="w-20 h-20 rounded-full" alt="Docker Logo" />
+    </div>
+    <h1 class="text-3xl text-white font-extrabold mt-4 tracking-wider">Docker</h1>
+    <div class="w-24 h-1 bg-white/50 rounded-full mx-auto my-3"></div> 
+    <p class="text-white/80 text-lg mb-2">Skill Progress</p>
+    <div class="w-full bg-white/30 rounded-full h-4 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full shadow-lg" style="width: 70%;"></div>
+    </div>
+    <p class="text-white text-xl font-semibold mt-2">70%</p>
+  </div>
+
+  <!-- CARD 4: VS Code -->
+  <div class="w-60 p-6 rounded-2xl bg-gradient-to-br from-amber-600 via-black to-gray-900 border-2 card-3d text-center shadow-2xl transition duration-300 ease-in-out hover:scale-105">
+    <div class="flex justify-center">
+      <img src="vscode.jpg" class="w-20 h-20 rounded-full" alt="VS Code Logo" />
+    </div>
+    <h1 class="text-3xl text-white font-extrabold mt-4 tracking-wider">VS Code</h1>
+    <div class="w-24 h-1 bg-white/50 rounded-full mx-auto my-3"></div> 
+    <p class="text-white/80 text-lg mb-2">Skill Progress</p>
+    <div class="w-full bg-white/30 rounded-full h-4 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full shadow-lg" style="width: 90%;"></div>
+    </div>
+    <p class="text-white text-xl font-semibold mt-2">90%</p>
+  </div>
+
+  <!-- CARD 5: Git -->
+  <div class="w-60 p-6 rounded-2xl glass card-3d text-center shadow-2xl transition duration-300 ease-in-out hover:scale-105">
+    <div class="flex justify-center">
+      <img src="git-logo-png_seeklogo-336916.png" class="w-20 h-20 rounded-full" alt="Git Logo" />
+    </div>
+    <h1 class="text-3xl text-white font-extrabold mt-4 tracking-wider">Git</h1>
+    <div class="w-24 h-1 bg-white/50 rounded-full mx-auto my-3"></div> 
+    <p class="text-white/80 text-lg mb-2">Skill Progress</p>
+    <div class="w-full bg-white/30 rounded-full h-4 overflow-hidden">
+      <div class="bg-gradient-to-r from-orange-400 to-yellow-300 h-4 rounded-full shadow-lg" style="width: 90%;"></div>
+    </div>
+    <p class="text-white text-xl font-semibold mt-2">90%</p>
+  </div>
+  </div>
+</section>
+
+<!-- my skill seection end here  -->
+
+<!-- my exprnce seection start here  -->
+<section class="text-white mt-16 mb-12 glass border border-amber-400 rounded-2xl 
+            w-full md:w-3/4 lg:w-3/5 xl:w-5/6 mx-auto p-6">
+
+    <h1 class="font-bold text-center text-3xl mb-3 text-amber-200">
+        Experience & Education
+    </h1>
+
+    <div class="w-full mx-auto text-center">
+
+       <p class="text-gray-200 text-base md:text-lg leading-relaxed space-y-6">
+  I have built a strong professional foundation through diverse roles in engineering and production, combined with academic learning and freelance projects. My journey has allowed me to develop both technical skills and leadership abilities.
+
+  <strong class="text-amber-400">Professional Experience</strong><br>
+  <span class="font-semibold">Servicing Engineer:</span> Gained hands-on experience in equipment maintenance and troubleshooting, ensuring smooth operations and customer satisfaction.<br>
+  <span class="font-semibold">Assistant Production In-Charge:</span> Assisted in supervising production activities, optimizing workflow, and maintaining quality standards.<br>
+  <span class="font-semibold">Maintenance In-Charge:</span> Led maintenance operations, coordinated with teams, and implemented efficient repair and upkeep processes.<br>
+  <span class="font-semibold">Freelance Web Developer:</span> Currently working on freelance projects, building responsive and scalable web applications using HTML, CSS, JavaScript, React, Next.js, Node.js, and MongoDB/MySQL.
+
+  <strong class="text-amber-400">Educational Qualification</strong><br>
+  <span class="font-semibold">Bachelor of Science in Computer Science & Engineering (CSE):</span> [Your University Name]<br>
+  <span class="font-semibold">Higher Secondary / Diploma:</span> [Your College / Institute Name]
+
+  This combination of engineering experience and web development skills allows me to approach projects with a practical, solution-oriented mindset, ensuring efficiency and quality in every task.
+</p>
+
+
+    </div>
+
+</section>
+<section class="w-full py-16 px-6 text-amber-50">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+
+    <!-- LEFT SIDE — EXPERIENCE TIMELINE -->
+  <div class="space-y-10">
+
+  <!-- Item 1 -->
+  <div class="flex gap-6">
+    <div class="border border-gray-300 bg-white rounded-full px-6 py-3 text-gray-600 font-medium shadow-sm flex items-center justify-center text-center">
+      2025 – PRESENT
+    </div>
+    <div>
+      <h3 class="text-2xl font-bold text-gray-800">Full Stack Developer <span class="text-blue-600">@FreelanceProjects</span></h3>
+      <p class="text-gray-600 mt-2">
+        Currently learning Full Stack development and working on freelance projects to build responsive and scalable web applications.
+      </p>
+    </div>
+  </div>
+
+  <!-- Item 2 -->
+  <div class="flex gap-6">
+    <div class="border border-gray-300 bg-white rounded-full px-6 py-3 text-gray-600 font-medium shadow-sm flex items-center justify-center text-center">
+      2023 – 2025
+    </div>
+    <div>
+      <h3 class="text-2xl font-bold text-gray-800">Maintenance Engineer <span class="text-green-600">@Bangladesh Bondhu Foundation</span></h3>
+      <p class="text-gray-600 mt-2">
+        Led maintenance operations, coordinated with teams, and implemented efficient repair and upkeep processes to ensure smooth functioning of equipment and facilities.
+      </p>
+    </div>
+  </div>
+
+  <!-- Item 3 -->
+  <div class="flex gap-6">
+    <div class="border border-gray-300 bg-white rounded-full px-6 py-3 text-gray-600 font-medium shadow-sm flex items-center justify-center text-center">
+      2021 – 2023
+    </div>
+    <div>
+      <h3 class="text-2xl font-bold text-gray-800">Assistant Production In-Charge <span class="text-green-600">@Bangladesh Bondhu Foundation</span></h3>
+      <p class="text-gray-600 mt-2">
+        Assisted in supervising production activities, optimizing workflow, and maintaining quality standards to ensure smooth operations.
+      </p>
+    </div>
+  </div>
+
+  <!-- Item 4 -->
+  <div class="flex gap-6">
+    <div class="border border-gray-300 bg-white rounded-full px-6 py-3 text-gray-600 font-medium shadow-sm flex items-center justify-center text-center">
+      2018 – 2021
+    </div>
+    <div>
+      <h3 class="text-2xl font-bold text-gray-800">Servicing Engineer <span class="text-blue-600">@Walton Micro Tech Corporation</span></h3>
+      <p class="text-gray-600 mt-2">
+        Gained hands-on experience in equipment maintenance and troubleshooting, ensuring smooth operations and customer satisfaction.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+    <!-- RIGHT SIDE — EDUCATION CARDS -->
+    <div class="space-y-10">
+
+      <!-- Card 1 -->
+      <div class="bg-gradient-to-br from-amber-600 via-black to-gray-900 p-10 rounded-3xl shadow-xl text-white">
+        <div class="text-4xl mb-4 opacity-80">
+          🎓
+        </div>
+        <h3 class="text-2xl font-bold">Computer Science and Engineering</h3>
+        <p class="text-white/80 mt-2">Prime Asia University</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gradient-to-br from-amber-600 via-black to-gray-900 p-10 rounded-3xl shadow-xl text-white">
+        <div class="text-4xl mb-4 opacity-80">
+          🎓
+        </div>
+        <h3 class="text-2xl font-bold">Diploma In Electronic Technologie</h3>
+        <p class="text-white/80 mt-2">Dhaka Polytechnic Institute/p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- my exprence seection end here  -->
+
+<!-- my servise seection start -->
+ <section id="servise" class="bg-gradient-to-br from-amber-600 via-black to-gray-900 text-white mt-16 mb-12 glass border border-amber-400 rounded-2xl 
+            w-full md:w-3/4 lg:w-3/5 xl:w-5/6 mx-auto p-6">
+
+    <h1 class="font-bold text-center text-3xl mb-3 text-amber-200">
+        My Web Development Expertise
+    </h1>
+
+    <div class="w-full mx-auto text-center">
+
+       <p class="text-gray-200 text-base md:text-lg leading-relaxed space-y-6">
+  I have built a strong professional foundation through diverse roles in engineering and production, and I am now fully focused on web development and freelance projects. My journey has allowed me to develop both technical skills and a solution-oriented mindset to deliver high-quality digital products.
+
+  <strong class="text-amber-400">My Services</strong><br>
+  <span class="font-semibold">Portfolio Websites:</span> Creating professional and responsive portfolio websites to showcase skills, projects, and achievements.<br>
+  <span class="font-semibold">Blog Websites:</span> Designing and developing modern, user-friendly blogs with engaging layouts and smooth navigation.<br>
+  <span class="font-semibold">SaaS Platforms:</span> Building scalable Software-as-a-Service applications with efficient architecture and functionality.<br>
+  <span class="font-semibold">E-Commerce Websites:</span> Developing online stores with seamless shopping experiences, payment integration, and responsive design.<br>
+  <span class="font-semibold">Chatbots:</span> Implementing intelligent chatbots for websites to enhance user interaction and support.<br>
+  <span class="font-semibold">Other Projects:</span> Working on various web applications using HTML, CSS, JavaScript, React, Next.js, Node.js, and MongoDB/MySQL.
+
+  <strong class="text-amber-400">Educational Qualification</strong><br>
+  <span class="font-semibold">Bachelor of Science in Computer Science & Engineering (CSE):</span> [Your University Name]<br>
+  <span class="font-semibold">Higher Secondary / Diploma:</span> [Your College / Institute Name]
+
+  By combining technical knowledge and practical experience, I aim to deliver efficient, scalable, and visually appealing web solutions for clients and businesses.
+</p>
+
+
+
+    </div>
+
+</section>
+<section class="flex flex-wrap gap-5 justify-center">
+  
+
+  <!-- Card 1 -->
+  <div class="card w-96 bg-base-100 border-2 rounded-2xl shadow-md overflow-hidden
+              transform transition-all duration-300 hover:-translate-y-2 hover:translate-x-1 hover:shadow-xl">
+    <figure>
+      <img src="marketkit-multipurpose-ecommerce-html-website-template_203166-original.jpg" 
+           alt="Ecommerce" class="rounded-t-2xl">
+    </figure>
+    <div class="p-6 text-amber-50 bg-gradient-to-br from-amber-600 via-black to-gray-900 ">
+      <h2 class="text-2xl font-bold mb-2">Ecommerce Websites</h2>
+      <p class="mb-4">I create responsive and scalable online stores with smooth shopping, secure payments, and easy product management.</p>
+      <div class="flex justify-end">
+        <button class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+          Live Link
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card w-96 bg-base-100 border-2 rounded-2xl shadow-md overflow-hidden
+              transform transition-all duration-300 hover:-translate-y-2 hover:-translate-x-1 hover:shadow-xl">
+    <figure>
+      <img src="portfolioweb.png" 
+           alt="portfolio" class="rounded-t-2xl">
+    </figure>
+    <div class="p-6 text-amber-50 bg-gradient-to-br from-amber-600 via-black to-gray-900">
+      <h2 class="text-2xl font-bold mb-2">PortFolio Websites</h2>
+      <p class="mb-4">I build professional and responsive portfolio websites to showcase your skills, projects, and achievements effectively.</p>
+      <div class="flex justify-end">
+        <button class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+          Live Link
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Card 3 -->
+  <div class="card w-96 bg-base-100 border-2 rounded-2xl shadow-md overflow-hidden
+              transform transition-all duration-300 hover:-translate-y-2 hover:-translate-x-1 hover:shadow-xl">
+    <figure>
+      <img src="saas.png" 
+           alt="saas" class="rounded-t-2xl">
+    </figure>
+    <div class="p-6 text-amber-50 bg-gradient-to-br from-amber-600 via-black to-gray-900">
+      <h2 class="text-2xl font-bold mb-2">Saas Websites</h2>
+      <p class="mb-4">I develop scalable SaaS platforms with efficient architecture and seamless functionality.</p><br>
+      <div class="flex justify-end">
+        <button class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+          Live Link
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="card w-96 bg-base-100 border-2 rounded-2xl shadow-md overflow-hidden
+              transform transition-all duration-300 hover:-translate-y-2 hover:translate-x-1 hover:shadow-xl">
+    <figure>
+      <img src="Gemini_Generated_Image_d3yhlqd3yhlqd3yh.png" 
+           alt="Blog" class="rounded-t-2xl">
+    </figure>
+    <div class="p-6 text-amber-50 bg-gradient-to-br from-amber-600 via-black to-gray-900">
+      <h2 class="text-2xl font-bold mb-2">Blog Websites</h2>
+      <p class="mb-4">I create modern, user-friendly blogs with engaging layouts and smooth navigation.</p><br>
+      <div class="flex justify-end">
+        <button class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+          Live Link
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 5 -->
+    <div class="card w-96 bg-base-100 border-2 rounded-2xl shadow-md overflow-hidden
+              transform transition-all duration-300 hover:-translate-y-2 hover:-translate-x-1 hover:shadow-xl">
+    <figure>
+      <img src="saas.png" 
+           alt="saas" class="rounded-t-2xl">
+    </figure>
+    <div class="p-6 text-amber-50 bg-gradient-to-br from-amber-600 via-black to-gray-900">
+      <h2 class="text-2xl font-bold mb-2">Micro Finance Websites</h2>
+      <p class="mb-4">I develop scalable SaaS-Micro Finance  platforms with efficient architecture and seamless functionality.</p><br>
+      <div class="flex justify-end">
+        <button class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+          Live Link
+        </button>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- my servise seection end here  -->
+
+<!-- my contact seection start here  -->
+<section id="Contact" class="bg-dark-bg text-gray-300 font-sans min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-7xl mx-auto">
+  
+      <h2 class="text-4xl pt-8 md:text-5xl font-extrabold text-center  perfect-dark-text">Contact</h2>
+      <div class="w-24 h-1 bg-amber-500 mx-auto mt-3 mb-1"></div>
+            
+
+        <!-- 3 Contact Info Cards Grid -->
+        <div class="grid grid-cols-1 mt-12 md:grid-cols-3 gap-8  mb-20">
+
+            <!-- Card 1: Address (Using Inline SVG - Map Pin) -->
+            <div class="bg-gradient-to-br from-amber-600 via-black to-gray-900 p-8 rounded-xl shadow-2xl border border-transparent hover:border-primary-pink transition duration-300 transform hover:-translate-y-1">
+                <!-- Icon Placeholder - Replaced with inline SVG -->
+                <div class="w-12 h-12 bg-primary-pink/10 rounded-full flex items-center justify-center mx-auto mb-4 ring-2 ring-primary-pink">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary-pink"><path d="M20 10c0 6-8 10-8 10s-8-4-8-10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-white text-center mb-4">Address</h3>
+                <p class="text-gray-400 text-center text-sm leading-relaxed">
+                    Tangail 1900, all 121/e, road 45 <br>
+                    House of street
+                </p>
+            </div>
+
+            <!-- Card 2: E-Mail (Using Inline SVG - Mail) -->
+            <div class="bg-gradient-to-br from-amber-600 via-black to-gray-900 p-8 rounded-xl shadow-2xl border border-transparent hover:border-primary-pink transition duration-300 transform hover:-translate-y-1">
+                <!-- Icon Placeholder - Replaced with inline SVG -->
+                <div class="w-12 h-12 bg-primary-pink/10 rounded-full flex items-center justify-center mx-auto mb-4 ring-2 ring-primary-pink">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary-pink"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.83 1.83 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-white text-center mb-4">E-Mail</h3>
+                <p class="text-gray-400 text-center text-sm leading-relaxed">
+                    sukanto5098@gmail.com<br>
+                    sukanto2547@gmail.com
+                </p>
+            </div>
+
+            <!-- Card 3: Call Me (Using Inline SVG - Phone) -->
+            <div class="bg-gradient-to-br from-amber-600 via-black to-gray-900 p-8 rounded-xl shadow-2xl border border-transparent hover:border-primary-pink transition duration-300 transform hover:-translate-y-1">
+                <!-- Icon Placeholder - Replaced with inline SVG -->
+                <div class="w-12 h-12 bg-primary-pink/10 rounded-full flex items-center justify-center mx-auto mb-4 ring-2 ring-primary-pink">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary-pink"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-7.53-7.53 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <h3 class="text-xl font-semibold text-white text-center mb-4">Call Me</h3>
+                <p class="text-gray-400 text-center text-sm leading-relaxed">
+                    +880 - 1766 - 4189 - 05<br>
+                    +880 - 1890 - 4646 - 90
+                </p>
+            </div>
+
+        </div>
+        <!-- End 3 Contact Info Cards Grid -->
+
+
+        <!-- Get in Touch & Form Section (Two Columns) -->
+        <div class="grid bg-gradient-to-br from-amber-600 via-black to-gray-900 grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- Left Column: Marketing Text -->
+            <div class="lg:sticky ml-8 mt-8 lg:top-8 h-fit">
+                <p class="text-sm font-semibold text-primary-pink mb-2 tracking-widest">
+                    GET IN TOUCH
+                </p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-6 leading-tight">
+                    Elevate your brand with Me
+                </h2>
+                <p class="text-gray-400 leading-relaxed max-w-md">
+                    I’m always open to discussing new projects, freelance opportunities, or collaborations. Fill out the contact form below, and I’ll get back to you as soon as possible.
+                </p>
+            </div>
+
+            <!-- Right Column: Contact Form -->
+            <div class="bg-dark-card p-6 sm:p-10 rounded-xl shadow-2xl">
+                <!-- Note: The form itself is HTML only, submitting to action="#" with POST method -->
+                <form action="https://formspree.io/f/mrbvzvbv" method="POST" class="space-y-6">
+
+                    <!-- Name and Phone Number Row -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Your Name" class="w-full bg-input-bg text-black border-b border-gray-700 focus:border-primary-pink focus:ring-0 p-3 rounded-t-lg transition duration-200" required>
+                        <input type="tel" placeholder="Phone Number" class="w-full bg-input-bg text-black border-b border-gray-700 focus:border-primary-pink focus:ring-0 p-3 rounded-t-lg transition duration-200" required>
+                    </div>
+
+                    <!-- Email and Subject Row -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <input type="email" placeholder="Your Email" class="w-full bg-input-bg text-black border-b border-gray-700 focus:border-primary-pink focus:ring-0 p-3 rounded-t-lg transition duration-200" required>
+                        <input type="text" placeholder="Subject" class="w-full bg-input-bg text-black border-b border-gray-700 focus:border-primary-pink focus:ring-0 p-3 rounded-t-lg transition duration-200" required>
+                    </div>
+
+                    <!-- Message Textarea -->
+                    <div>
+                        <textarea placeholder="Your Message" rows="5" class="w-full bg-input-bg text-black border-b border-gray-700 focus:border-primary-pink focus:ring-0 p-3 rounded-t-lg transition duration-200 resize-none" required></textarea>
+                    </div>
+
+                    <!-- Submit Button (Using Inline SVG - Arrow Right) -->
+                    <button type="submit" class="w-full bg-primary-pink text-white font-semibold py-4 rounded-full shadow-lg shadow-primary-pink/50 bg-pink-600  flex items-center justify-center space-x-2 mt-8">
+                        <span>Appointment Now</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </button>
+                    
+                </form>
+            </div>
+
+        </div>
+        <!-- End Get in Touch & Form Section -->
+
+    </div>
+</section>
+<!-- my contact seection end here  -->
+
+  <!-- my footer seection start -->
+    <footer class="text-amber-50 mt-10 bg-gradient-to-br from-amber-600 via-black to-gray-900 m-10 border border-2 border-amber-400 rounded-2xl ">
+      <div class="flex justify-center gap-10 mt-10 text-xl">
+        
+        <a class=" hover:text-amber-300" href="#home">Home</a>
+        <a class=" hover:text-amber-300" href="#servise">Blog</a>
+        <a class=" hover:text-amber-300" href="#servise">Services</a>
+      
+      </div>
+
+      <div class="flex items-center gap-6 justify-center mt-5 mb-5">
+                    <!-- Social Icons -->
+                    <div class="flex items-center gap-4">
+
+                        <a href="https://x.com/home"target="_blank" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fa-brands fa-twitter bg-[#1DA1F2]  hover:bg-green-400 duration-200 p-2 rounded-full"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/sukanto192/"target="_blank" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fa-brands fa-instagram bg-[#E1306C]  hover:bg-green-400 duration-200 p-2 rounded-full"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/sukanto-sarker/"target="_blank" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fa-brands fa-linkedin bg-[#0A66C2] p-2 rounded-full  hover:bg-green-400 duration-200"></i>
+                        </a>
+
+                        <a href="https://github.com/Sukanto-Sarker"target="_blank" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fa-brands fa-github bg-[#868282] p-2 rounded-full hover:bg-green-400 duration-200"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/sukanto.sarker.73/"target="_blank" class="text-gray-300 hover:text-white text-xl">
+                            <i class="fa-brands fa-facebook bg-[#1877F2] p-2 rounded-full  hover:bg-green-400 duration-200"></i>
+                        </a>
+
+                    </div>
+       </div>
+      <div>
+        <p class="text-center mb-5 ">© 2025 Sukanto Sarker — All rights reserved.</p>
+      </div>
+    </footer>
+   
+
+<script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
